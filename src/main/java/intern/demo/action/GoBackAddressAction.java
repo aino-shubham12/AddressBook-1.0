@@ -1,8 +1,8 @@
 /*
  * AppOps is a Java framework to develop, deploy microservices with ease and is available for free
- * and common use developed by AinoSoft.
+ * and common use developed by AinoSoft ( www.ainosoft.com )
  * 
- * AppOps and AinoSoft are registered trademarks of Aino Softwares private limited
+ * AppOps and AinoSoft are registered trademarks of Aino Softwares private limited, India.
  * 
  * Copyright (C) <2016> <Aino Softwares private limited>
  * 
@@ -18,8 +18,8 @@
  * You should have received a copy of the GNU General Public License and applicable additional terms
  * along with this program.
  * 
- * If not, see <https://www.gnu.org/licenses/> <https://www.appops.org/license>
- */ 
+ * If not, see <https://www.gnu.org/licenses/> and <https://www.appops.org/license>
+ */
  
  
 package intern.demo.action;
@@ -28,8 +28,8 @@ package intern.demo.action;
 import intern.demo.Menu;
 
 /**
- * Description : This class define the execute method which is present in Action
- * Interface , so it implements Action Interface
+ * Description : This class define the execute method which is present in Action Interface , so it
+ * implements Action Interface
  * 
  * @author : Shubham Bangar
  * @version 1.0
@@ -37,13 +37,14 @@ import intern.demo.Menu;
 
 public class GoBackAddressAction implements Action {
 
-	private Menu menu;
-	public GoBackAddressAction(Menu menu) {
-		this.menu = menu;
-	}
+  private Menu menu;
 
-	/** It is a reference of Menu class which is used to display Parent Menu and MenuItem */
-	public void execute() {
-		menu.display();
-	}
+  public GoBackAddressAction(Menu menu) {
+    this.menu = menu;
+  }
+
+  /** It is a reference of Menu class which is used to display Parent Menu and MenuItem */
+  public void execute() {
+    menu.display();
+  }
 }

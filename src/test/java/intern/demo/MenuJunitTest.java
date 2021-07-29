@@ -1,8 +1,8 @@
 /*
  * AppOps is a Java framework to develop, deploy microservices with ease and is available for free
- * and common use developed by AinoSoft.
+ * and common use developed by AinoSoft ( www.ainosoft.com )
  * 
- * AppOps and AinoSoft are registered trademarks of Aino Softwares private limited
+ * AppOps and AinoSoft are registered trademarks of Aino Softwares private limited, India.
  * 
  * Copyright (C) <2016> <Aino Softwares private limited>
  * 
@@ -18,8 +18,8 @@
  * You should have received a copy of the GNU General Public License and applicable additional terms
  * along with this program.
  * 
- * If not, see <https://www.gnu.org/licenses/> <https://www.appops.org/license>
- */ 
+ * If not, see <https://www.gnu.org/licenses/> and <https://www.appops.org/license>
+ */
  
  
 package intern.demo;
