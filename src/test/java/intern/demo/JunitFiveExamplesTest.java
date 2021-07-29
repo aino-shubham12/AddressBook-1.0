@@ -24,48 +24,40 @@
  
 package intern.demo;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertSame;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTimeout;
+import java.time.Duration;
+import java.util.Arrays;
+import java.util.List;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class AddressJunitTest {
 
-  Address ad = new Address("Pune", "mundhwa", 24);
-  ApplicationBook abook = new ApplicationBook();
-  ApplicationBook book = null;
+class JunitFiveExamplesTest {
 
+  @Test
+  public void shouldRaiseAnException() throws Exception {
+    assertThrows(Exception.class, () -> {
+      throw new NullPointerException("Null parameters are not allowed");
+    });
+  }
 
 
   @Test
-  public void test() {
-    assertTrue(ad.getStreet() == "Pune");
-    assertTrue(ad.getCity() == "mundhwa");
-    assertTrue(ad.getPinCode() == 24);
+  public void shouldAssertAllTheGroup() {
+    List<Integer> list = Arrays.asList(1, 2, 4);
+    assertAll(() -> assertEquals(list.get(0).intValue(), 1),
+        () -> Assertions.assertEquals(list.get(1).intValue(), 2),
+        () -> Assertions.assertEquals(list.get(2).intValue(), 4));
   }
 
   @Test
-  public void testIsMatch() {
-    assertTrue(ad.isMatchCity("mundhwa"));
-    assertTrue(ad.isMatchStreet("Pune"));
-    assertTrue(ad.isMatchPincode(24));
+  public void shouldFailBecauseTimeout() throws InterruptedException {
+    assertTimeout(Duration.ofMillis(1), () -> Thread.sleep(10));
   }
 
-  @Test
-  public void isObjectNotNull() {
-    assertNotNull(ad);
-  }
 
-  @Test
-  public void isObjectNull() {
-    assertNull(book);
-  }
-
-  @Test
-  public void isObjectSame() {
-    assertSame(ad, ad);
-
-  }
 
 }
